@@ -24,42 +24,21 @@
         />
       </div>
       <div class="container">
-        <section class="city-card card-1">
+        <% for(let i in cityList){%>
+        <!-- <section class="city-card card-1" style="background:url(/images/pic1.jpg)"> -->
+        <section
+          class="city-card card-1"
+          style="background: url(/images/pic1.jpg)"
+        >
           <div class="place">
-            <p class="city-name">City</p>
+            <p class="city-name"><%=cityList[i].name%></p>
             <p class="country-name">Country</p>
           </div>
           <div class="temp">
-            <p>3°</p>
+            <p><%=cityList[i].temp%>°</p>
           </div>
         </section>
-        <section class="city-card card-2">
-          <div class="place">
-            <p class="city-name">City</p>
-            <p class="country-name">Country</p>
-          </div>
-          <div class="temp">
-            <p>3°</p>
-          </div>
-        </section>
-        <section class="city-card card-3">
-          <div class="place">
-            <p class="city-name">City</p>
-            <p class="country-name">Country</p>
-          </div>
-          <div class="temp">
-            <p>3°</p>
-          </div>
-        </section>
-        <section class="city-card card-4">
-          <div class="place">
-            <p class="city-name">City</p>
-            <p class="country-name">Country</p>
-          </div>
-          <div class="temp">
-            <p>3°</p>
-          </div>
-        </section>
+        <%}%>
       </div>
     </main>
   </body>
