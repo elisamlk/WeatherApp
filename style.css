@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.city-card {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.city-name {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.country-name {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.temp p {
+  font-size: 50px;
+}
+
+.card-1 {
+  background-image: url("pic1.jpg");
+}
+
+.card-2 {
+  background-image: url("pic2.jpg");
+}
+
+.card-3 {
+  background-image: url("pic3.jpg");
+}
+
+.card-4 {
+  background-image: url("pic4.jpg");
+}
