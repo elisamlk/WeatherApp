@@ -4,12 +4,15 @@
   font-family: "Quicksand", sans-serif;
 }
 
+main {
+  padding: 20px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
   font-weight: bold;
 }
 
@@ -32,16 +35,19 @@
 
 .city-name {
   font-size: 50px;
+  opacity: 0.7;
   text-transform: uppercase;
 }
 
 .country-name {
   font-size: 30px;
+  opacity: 0.7;
   text-transform: uppercase;
 }
 
 .temp p {
   font-size: 50px;
+  opacity: 0.7;
 }
 
 .card-1 {
@@ -58,4 +64,15 @@
 
 .card-4 {
   background-image: url("pic4.jpg");
+}
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px 0 15px 0;
+  border: none;
+  background: #e7e7e7e7;
+  outline: none;
+  border-radius: 5px;
+  height:50px;
 }
