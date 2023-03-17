@@ -51,19 +51,19 @@ main {
 }
 
 .card-1 {
-  background-image: url("pic1.jpg");
+  background-image: url("/images/pic1.jpg");
 }
 
 .card-2 {
-  background-image: url("pic2.jpg");
+  background-image: url("/images/pic2.jpg");
 }
 
 .card-3 {
-  background-image: url("pic3.jpg");
+  background-image: url("/images/pic3.jpg");
 }
 
 .card-4 {
-  background-image: url("pic4.jpg");
+  background-image: url("/images/pic4.jpg");
 }
 
 input {
@@ -74,5 +74,5 @@ input {
   background: #e7e7e7e7;
   outline: none;
   border-radius: 5px;
-  height:50px;
+  height: 50px;
 }
