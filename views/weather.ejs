@@ -27,8 +27,14 @@
         <% for(let i in cityList){%>
         <!-- <section class="city-card card-1" style="background:url(/images/pic1.jpg)"> -->
         <section
-          class="city-card card-1"
-          style="background: url(/images/pic1.jpg)"
+          class="city-card"
+          style="
+            background: url(<%=cityList[i].img%>);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+          "
         >
           <div class="place">
             <p class="city-name"><%=cityList[i].name%></p>
