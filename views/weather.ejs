@@ -11,18 +11,26 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/8dacf958f8.js"
+      crossorigin="anonymous"
+    ></script>
     <title>WeatherApp</title>
   </head>
   <body>
     <main>
-      <div class="search-city">
+      <form action="/add-city" method="post" class="search-city">
         <input
+          name="newcity"
           type="text"
           id="name"
           name="name"
-          placeholder="Enter city name"
+          placeholder="   Enter city name"
         />
-      </div>
+        <button type="submit">
+          <i class="fas fa-plus"></i>
+        </button>
+      </form>
       <div class="container">
         <% for(let i in cityList){%>
         <!-- <section class="city-card card-1" style="background:url(/images/pic1.jpg)"> -->
@@ -43,6 +51,7 @@
           <div class="temp">
             <p><%=cityList[i].temp%>°</p>
           </div>
+          <button class="close-btn">Close</button>
         </section>
         <%}%>
       </div>
