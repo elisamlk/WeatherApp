@@ -51,7 +51,9 @@
           <div class="temp">
             <p><%=cityList[i].temp%>°</p>
           </div>
-          <button class="close-btn">Close</button>
+          <a href="/delete-city?position=<%=i%>"
+            ><button class="close-btn">Close</button></a
+          >
         </section>
         <%}%>
       </div>

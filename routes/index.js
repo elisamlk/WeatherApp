@@ -27,4 +27,10 @@ router.post("/add-city", function (req, res, next) {
   res.render("weather", { cityList });
 });
 
+router.get("/delete-city", function (req, res, next) {
+  console.log(req.query);
+  cityList.splice(req.query.position, 1);
+  res.render("weather", { cityList });
+});
+
 module.exports = router;
