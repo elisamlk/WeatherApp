@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var request = require("sync-request");
 
 var cityList = [
   { name: "Paris", desc: "Couvert", img: "/images/pic1.jpg", temp: 10 },
@@ -18,6 +19,12 @@ router.get("/weather", function (req, res, next) {
 });
 
 router.post("/add-city", function (req, res, next) {
+  let data = request(
+    "GET",
+    "http://api.weatherstack.com/current?access_key=92ce8a6e5de226edc0e7e6ad53a2bf68&query=Paris"
+  );
+  let dataApi = JSON.parse(data.body);
+  console.log(dataApi);
   let alreadyExist = false;
   for (let i in cityList) {
     if (req.body.newcity.toLowerCase() == cityList[i].name.toLowerCase()) {
