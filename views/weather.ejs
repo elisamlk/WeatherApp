@@ -31,6 +31,9 @@
           <i class="fas fa-plus"></i>
         </button>
       </form>
+      <% if (cityList.length == 0){%>
+      <p>No cities found</p>
+      <%}%>
       <div class="container">
         <% for(let i in cityList){%>
         <!-- <section class="city-card card-1" style="background:url(/images/pic1.jpg)"> -->

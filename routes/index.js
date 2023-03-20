@@ -18,12 +18,22 @@ router.get("/weather", function (req, res, next) {
 });
 
 router.post("/add-city", function (req, res, next) {
-  cityList.push({
-    name: req.body.newcity,
-    desc: "Couvert",
-    img: "/images/pic2.jpg",
-    temp: 24,
-  });
+  let alreadyExist = false;
+  for (let i in cityList) {
+    if (req.body.newcity.toLowerCase() == cityList[i].name.toLowerCase()) {
+      alreadyExist = true;
+    }
+  }
+
+  if (alreadyExist == false) {
+    cityList.push({
+      name: req.body.newcity,
+      desc: "Couvert",
+      img: "/images/pic2.jpg",
+      temp: 24,
+    });
+  }
+
   res.render("weather", { cityList });
 });
 
